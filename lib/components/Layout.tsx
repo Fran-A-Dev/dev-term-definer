@@ -2,6 +2,7 @@ import styles from './Layout.module.scss';
 import Head from 'next/head';
 import React from 'react';
 import Nav from 'Nav/Nav';
+import Footer from 'Footer/Footer';
 
 
 
@@ -17,6 +18,7 @@ return <>
 <Nav />
 <main>{children}</main>
 </div>
+<Footer></Footer>
 </>
 };
 

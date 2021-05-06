@@ -4,6 +4,10 @@ import { useQuery, gql } from '@apollo/client';
 import { getNextStaticProps } from '@wpengine/headless/next';
 import React from 'react';
 import Layout from 'lib/components/Layout';
+import { Devterm } from 'lib/types';
+import Card from 'lib/components/Card/Card';
+
+
 
 const GET_ALL_TERMS = gql`
   {
@@ -18,12 +22,7 @@ const GET_ALL_TERMS = gql`
   }
 `;
 
-interface Devterm {
-  data: any;
 
-  term: string;
-  definitions: string;
-}
 
 const Home = () => {
   const { data } = useQuery(GET_ALL_TERMS);
@@ -33,7 +32,7 @@ const Home = () => {
   return (
     <Layout>
       {devterms.map((devterm) => (
-        <div>{devterm.data.term}</div>
+        <Card key={devterm.data.term} {...devterm.data} />
       ))}
     </Layout>
   );

@@ -1,7 +1,7 @@
 .layout{
 font-family: monospace;
-color: rgb(3, 218, 50);
-background-color: black;
+color: var(--color);
+background-color: var(--bg-color);
 main {
 padding-top: 1rem;
 max-width: 680px;
