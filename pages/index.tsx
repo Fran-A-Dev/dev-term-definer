@@ -9,6 +9,7 @@ import Card from 'lib/components/Card/Card';
 
 
 
+
 const GET_ALL_TERMS = gql`
   {
     devterms {
