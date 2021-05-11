@@ -18,7 +18,7 @@ return <>
 <Nav />
 <main>{children}</main>
 </div>
-<Footer></Footer>
+<Footer />
 </>
 };
 

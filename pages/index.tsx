@@ -6,14 +6,14 @@ import React from 'react';
 import Layout from 'lib/components/Layout';
 import { Devterm } from 'lib/types';
 import Card from 'lib/components/Card/Card';
-
-
-
+import Detail from './[slug]';
+import Link from 'next/link';
 
 const GET_ALL_TERMS = gql`
   {
     devterms {
       nodes {
+        id 
         data: acfDevterm {
           term
           definitions
@@ -23,8 +23,6 @@ const GET_ALL_TERMS = gql`
   }
 `;
 
-
-
 const Home = () => {
   const { data } = useQuery(GET_ALL_TERMS);
   console.log(data);
@@ -33,7 +31,9 @@ const Home = () => {
   return (
     <Layout>
       {devterms.map((devterm) => (
-        <Card key={devterm.data.term} {...devterm.data} />
+        <Card key={devterm.data.term} {...devterm.data} id={devterm.id} />
+        
+       
       ))}
     </Layout>
   );
