@@ -3,7 +3,7 @@ import { useRouter } from 'next/dist/client/router';
 import { gql, useQuery } from '@apollo/client';
 import React from 'react';
 import Layout from 'lib/components/Layout';
-import Card from 'lib/components/Card/Card';
+
 
 const GET_ALL_TERMS = gql`
   {

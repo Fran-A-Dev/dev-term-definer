@@ -6,8 +6,6 @@ import React from 'react';
 import Layout from 'lib/components/Layout';
 import { Devterm } from 'lib/types';
 import Card from 'lib/components/Card/Card';
-import Detail from './[slug]';
-import Link from 'next/link';
 
 const GET_ALL_TERMS = gql`
   {
