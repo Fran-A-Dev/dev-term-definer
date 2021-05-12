@@ -3,33 +3,19 @@ import Link from 'next/link';
 import styles from './Card.module.scss';
 import React from 'react';
 
+const Card: React.FC<Devterm> = ({
+  term,
 
-
-
-
-const Card: React.FC<Devterm> = ({ 
-    
-    
-    
-    
-    term,
-   
-    id,
-
-
-
-
-
+  id,
 }) => {
   return (
     <div className={styles.card}>
       <h2 className={styles.h2}>Click on the term to learn!</h2>
 
       <div className="term">
-        <Link  href={`/details/${id}`}>
-          <a href={`details/${id}`}>
+        <Link href={`/details/${id}`}>
+          <a href={`/details/${id}`}>
             <span className={styles.term}>{term}</span>
-            
           </a>
         </Link>
       </div>
