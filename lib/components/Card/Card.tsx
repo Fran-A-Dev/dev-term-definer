@@ -13,7 +13,7 @@ const Card: React.FC<Devterm> = ({
     
     
     term,
-    definitions,
+   
     id,
 
 

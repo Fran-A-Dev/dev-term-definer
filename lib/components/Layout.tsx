@@ -1,8 +1,7 @@
 import styles from './Layout.module.scss';
 import Head from 'next/head';
 import React from 'react';
-import Nav from 'Nav/Nav';
-import Footer from 'Footer/Footer';
+import Nav from 'lib/components/Nav/Nav';
 
 
 
@@ -18,7 +17,7 @@ return <>
 <Nav />
 <main>{children}</main>
 </div>
-<Footer />
+
 </>
 };
 
