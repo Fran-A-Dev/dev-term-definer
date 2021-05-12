@@ -18,6 +18,7 @@ const Detail = () => {
       }
     }
   `);
+  console.log(data);
 
   const devterm: Devterm = data?.devterm;
   return <Layout>{devterm?.data.definitions}</Layout>;

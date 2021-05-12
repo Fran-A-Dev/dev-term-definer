@@ -3,11 +3,7 @@ import Link from 'next/link';
 import styles from './Card.module.scss';
 import React from 'react';
 
-const Card: React.FC<Devterm> = ({
-  term,
-
-  id,
-}) => {
+const Card: React.FC<Devterm> = ({ term, id }) => {
   return (
     <div className={styles.card}>
       <h2 className={styles.h2}>Click on the term to learn!</h2>

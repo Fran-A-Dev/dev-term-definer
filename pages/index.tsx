@@ -11,7 +11,7 @@ const GET_ALL_TERMS = gql`
   {
     devterms {
       nodes {
-        id 
+        id
         data: acfDevterm {
           term
           definitions
@@ -23,15 +23,13 @@ const GET_ALL_TERMS = gql`
 
 const Home = () => {
   const { data } = useQuery(GET_ALL_TERMS);
-  console.log(data);
+
   const devterms: Devterm[] = data?.devterms?.nodes ?? [];
-  console.log(devterms);
+
   return (
     <Layout>
       {devterms.map((devterm) => (
         <Card key={devterm.data.term} {...devterm.data} id={devterm.id} />
-        
-       
       ))}
     </Layout>
   );
