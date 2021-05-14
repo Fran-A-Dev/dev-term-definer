@@ -5,7 +5,12 @@
   background-color: var(--bg-color);
   main {
     padding-top: 1rem;
-    max-width: 680px;
+    max-width: var(--container-width);
     margin: 0 auto;
   }
+}
+
+.blog {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
 }
