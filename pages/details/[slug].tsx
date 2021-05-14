@@ -13,15 +13,25 @@ const Detail = () => {
       devterm(id: "${slug}") {
         data: acfDevterm {
           term
-          definitions
+        definitions
+        personalBlog
+     
+          
         }
       }
-    }
+    
+  }
+
   `);
   console.log(data);
 
   const devterm: Devterm = data?.devterm;
-  return <Layout>{devterm?.data.definitions}</Layout>;
+  return (
+    <Layout>
+      {devterm?.data.definitions}
+      <div>{devterm?.data.personalBlog}</div>
+    </Layout>
+  );
 };
 
 export default Detail;
