@@ -20,8 +20,13 @@ const Detail = () => {
     }
   }
 `);
-  console.log(data);
+
   const devterm: Devterm = data?.devterm;
+
+  if (!devterm) {
+    return <div className="loader">Loading...</div>;
+  }
+
   return (
     <Layout>
       {devterm?.data.definitions}
