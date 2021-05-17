@@ -21,7 +21,9 @@ const Toggle = () => {
           }
         }}
       />
-      <span className={[styles.slider, styles.round].join(' ')}></span>
+      <span className={[styles.slider, styles.round].join(' ')}>
+        <div>🌙 ☀️</div>
+      </span>
     </label>
   );
 };
