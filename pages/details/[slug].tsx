@@ -3,6 +3,7 @@ import { useRouter } from 'next/dist/client/router';
 import { gql, useQuery } from '@apollo/client';
 import React from 'react';
 import Layout from 'lib/components/Layout';
+import { GetStaticPropsContext } from 'next';
 
 const Detail = () => {
   const router = useRouter();
@@ -30,7 +31,6 @@ const Detail = () => {
   return (
     <Layout>
       {devterm?.data.definitions}
-
       <div>{devterm?.data.personalBlog}</div>
     </Layout>
   );

@@ -23,5 +23,24 @@
 
 .blog {
   padding: 0.5rem 1rem;
-  margin-right: 1rem;
+  text-align: right;
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .container {
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  flex: 2;
+}
+
+.emojilink {
+  margin-right: 10rem;
+  padding-bottom: 0.5rem 0rem;
 }

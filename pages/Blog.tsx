@@ -1,5 +1,9 @@
 import { useQuery, gql } from '@apollo/client';
+import { getApolloClient } from '@wpengine/headless';
+import { getNextStaticProps } from '@wpengine/headless/next';
+import { usePosts } from '@wpengine/headless/react';
 import Layout from 'lib/components/Layout';
+import { GetStaticPropsContext } from 'next';
 
 const Blog = () => {
   const { data } = useQuery(gql`
@@ -31,4 +35,5 @@ const Blog = () => {
     </Layout>
   );
 };
+
 export default Blog;
